@@ -1,4 +1,4 @@
-﻿# Installs clawd-notify: registers Claude Code hooks that show Clawd instead of a plain Windows toast.
+# Installs clawd-notify: registers Claude Code hooks that show Clawd instead of a plain Windows toast.
 #
 #   One-liner:   irm https://raw.githubusercontent.com/AndrewPythonist/clawd-notify/main/install.ps1 | iex
 #   From a clone: powershell -ExecutionPolicy Bypass -File install.ps1
