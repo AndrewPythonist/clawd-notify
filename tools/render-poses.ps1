@@ -107,6 +107,13 @@ function Save-Png([string]$path, [string]$spec) {
     $g.Dispose(); $bmp.Save($path, [Drawing.Imaging.ImageFormat]::Png); $bmp.Dispose()
 }
 
+# Drop images of poses that no longer exist
+$names = $ClawdPoses | ForEach-Object { $_.name }
+Get-ChildItem $posesDir -File | Where-Object { $_.BaseName -notin $names } | ForEach-Object {
+    Remove-Item $_.FullName
+    Write-Host "  removed $($_.Name)"
+}
+
 foreach ($pose in $ClawdPoses) {
     $frames = @($pose.frames | ForEach-Object { , (Get-FramePixels $_) })
     Save-Gif (Join-Path $posesDir "$($pose.name).gif") $frames $pose.ms
@@ -117,8 +124,8 @@ foreach ($pose in $ClawdPoses) {
 # --- Popup previews for the README ---
 $popup = Join-Path $root 'clawd-popup.ps1'
 $shots = @(
-    @{ file = 'popup-en.png';           args = @('-Lang', 'en', '-Variant', 'laptop') }
-    @{ file = 'popup-ru.png';           args = @('-Lang', 'ru', '-Variant', 'laptop') }
+    @{ file = 'popup-en.png';           args = @('-Lang', 'en', '-Variant', 'party') }
+    @{ file = 'popup-ru.png';           args = @('-Lang', 'ru', '-Variant', 'party') }
     @{ file = 'popup-attention-en.png'; args = @('-Lang', 'en', '-Kind', 'attention', '-Variant', 'alert') }
     @{ file = 'popup-attention-ru.png'; args = @('-Lang', 'ru', '-Kind', 'attention', '-Variant', 'alert') }
 )

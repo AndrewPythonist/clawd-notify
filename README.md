@@ -21,9 +21,9 @@
 
 | | | | |
 |:-:|:-:|:-:|:-:|
-| <img src="poses/cheer.gif" width="150"><br>`cheer` | <img src="poses/wave.gif" width="150"><br>`wave` | <img src="poses/laptop.gif" width="150"><br>`laptop` | <img src="poses/sleepy.gif" width="150"><br>`sleepy` |
-| <img src="poses/coffee.gif" width="150"><br>`coffee` | <img src="poses/party.gif" width="150"><br>`party` | <img src="poses/love.gif" width="150"><br>`love` | <img src="poses/cool.gif" width="150"><br>`cool` |
-| <img src="poses/dance.gif" width="150"><br>`dance` | <img src="poses/trophy.gif" width="150"><br>`trophy` | <img src="poses/alert.gif" width="150"><br>`alert` | <img src="poses/confused.gif" width="150"><br>`confused` |
+| <img src="poses/cheer.gif" width="150"><br>`cheer` | <img src="poses/wave.gif" width="150"><br>`wave` | <img src="poses/laptop.gif" width="150"><br>`laptop` | <img src="poses/coffee.gif" width="150"><br>`coffee` |
+| <img src="poses/party.gif" width="150"><br>`party` | <img src="poses/love.gif" width="150"><br>`love` | <img src="poses/dance.gif" width="150"><br>`dance` | <img src="poses/trophy.gif" width="150"><br>`trophy` |
+| <img src="poses/check.gif" width="150"><br>`check` | <img src="poses/finish.gif" width="150"><br>`finish` | <img src="poses/alert.gif" width="150"><br>`alert` | <img src="poses/confused.gif" width="150"><br>`confused` |
 
 «Задача готова» выбирает из первых десяти поз, «нужно внимание» — из `alert`, `confused` и `wave`.
 Статичные PNG всех поз лежат в [`poses/`](poses).
